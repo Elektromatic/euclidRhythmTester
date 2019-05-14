@@ -1,0 +1,48 @@
+#N canvas 526 36 369 369 12;
+#X obj 96 214 inlet;
+#X obj 96 283 outlet;
+#X floatatom 216 116 7 0 0 0 - - -, f 7;
+#X obj 181 195 loadbang;
+#X obj 96 234 eSeq \$1;
+#X obj 138 37 expDist \$1;
+#X obj 181 214 f 0;
+#X msg 226 176 8;
+#N canvas 798 113 632 468 copyrightInfo 0;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an Elektron
+Digitakt. Copyright (C) 2019 Jerry Z. Raski This program is free software:
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation
+\, either version 3 of the License \, or (at your option) any later
+version. This program is distributed in the hope that it will be useful
+\, but WITHOUT ANY WARRANTY \; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details. You should have received a copy of
+the GNU General Public License along with this program. If not \, see
+<https://www.gnu.org/licenses/>.;
+#X restore 241 346 pd copyrightInfo;
+#X msg 257 176 16;
+#X obj 138 116 random 8;
+#X obj 192 136 random 8;
+#X obj 192 155 sel 0 1 2 3 4 5 6 7;
+#X msg 192 176 4;
+#X connect 0 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 0;
+#X connect 5 0 10 0;
+#X connect 5 0 11 0;
+#X connect 5 1 2 0;
+#X connect 6 0 4 2;
+#X connect 7 0 4 3;
+#X connect 9 0 4 3;
+#X connect 10 0 4 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 1 7 0;
+#X connect 12 2 7 0;
+#X connect 12 3 7 0;
+#X connect 12 4 9 0;
+#X connect 12 5 9 0;
+#X connect 12 6 9 0;
+#X connect 12 7 9 0;
+#X connect 13 0 4 3;

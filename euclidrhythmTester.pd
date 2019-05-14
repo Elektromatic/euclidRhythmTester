@@ -1,0 +1,93 @@
+#N canvas 1217 407 657 571 12;
+#X obj 129 29 bng 30 250 50 0 empty empty Go -22 7 0 10 -204786 -1
+-1;
+#X obj 129 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 90 156 spigot;
+#X floatatom 117 139 5 0 0 1 bpm - -, f 5;
+#X obj 45 304 makenote 80 200;
+#X obj 45 225 euclidRhythm cowbell;
+#X obj 45 325 noteout 5;
+#X obj 63 247 randScales;
+#X obj 45 285 f;
+#X obj 336 304 makenote 80 200;
+#X obj 336 285 f;
+#X obj 194 304 makenote 80 200;
+#X obj 194 325 noteout 6;
+#X obj 212 265 + 36;
+#X obj 194 285 f;
+#X obj 465 304 makenote 80 200;
+#X obj 483 265 + 36;
+#X obj 465 285 f;
+#X obj 336 325 noteout 7;
+#X obj 465 325 noteout 8;
+#X obj 137 82 sel 0 1;
+#X obj 137 119 s stop;
+#X obj 158 101 s go;
+#X obj 36 119 midiClockOut;
+#X obj 11 503 loadbang;
+#N canvas 798 113 632 468 copyrightInfo 0;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an Elektron
+Digitakt. Copyright (C) 2019 Jerry Z. Raski This program is free software:
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation
+\, either version 3 of the License \, or (at your option) any later
+version. This program is distributed in the hope that it will be useful
+\, but WITHOUT ANY WARRANTY \; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details. You should have received a copy of
+the GNU General Public License along with this program. If not \, see
+<https://www.gnu.org/licenses/>.;
+#X restore 75 543 pd copyrightInfo;
+#X obj 11 543 print -n;
+#X obj 354 246 randScales;
+#X obj 212 246 randScales;
+#X obj 483 246 randScales;
+#X msg 11 523 euclidRhythmTester Copyright (C) 2019 Jerry Z Raski;
+#X obj 63 266 + 48;
+#X obj 354 265 + 36;
+#X obj 194 225 euclidRhythm closed;
+#X obj 336 225 euclidRhythm open;
+#X obj 465 225 euclidRhythm cymbal;
+#X connect 0 0 1 0;
+#X connect 1 0 2 1;
+#X connect 1 0 20 0;
+#X connect 2 0 5 0;
+#X connect 2 0 33 0;
+#X connect 2 0 34 0;
+#X connect 2 0 35 0;
+#X connect 4 0 6 0;
+#X connect 4 1 6 1;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 7 0 31 0;
+#X connect 8 0 4 0;
+#X connect 9 0 18 0;
+#X connect 9 1 18 1;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 13 0 14 1;
+#X connect 14 0 11 0;
+#X connect 15 0 19 0;
+#X connect 15 1 19 1;
+#X connect 16 0 17 1;
+#X connect 17 0 15 0;
+#X connect 20 0 21 0;
+#X connect 20 1 22 0;
+#X connect 23 2 2 0;
+#X connect 23 3 3 0;
+#X connect 24 0 30 0;
+#X connect 27 0 32 0;
+#X connect 28 0 13 0;
+#X connect 29 0 16 0;
+#X connect 30 0 26 0;
+#X connect 31 0 8 1;
+#X connect 32 0 10 1;
+#X connect 33 0 14 0;
+#X connect 33 0 28 0;
+#X connect 34 0 10 0;
+#X connect 34 0 27 0;
+#X connect 35 0 17 0;
+#X connect 35 0 29 0;

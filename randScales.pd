@@ -1,0 +1,85 @@
+#N canvas 340 207 775 577 12;
+#X floatatom 59 99 5 0 0 1 Scale_tones_bet_0-11 - -, f 5;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0-pitches 12 float 3;
+#A 0 0 0 1 0 1 0 0 1 0 1 0 0;
+#X coords 0 1.2 12 0 100 70 1 0 0;
+#X restore 349 25 graph;
+#X obj 275 221 loadbang;
+#X text 412 488 Negative major;
+#X obj 59 59 inlet;
+#X obj 59 118 outlet;
+#X text 410 325 Major scale TTSTTTS;
+#X text 411 407 Minor scale TSTTSTT;
+#X text 109 114 one octive;
+#X text 409 245 Major pentatonic T T 3S T 3S;
+#X obj 274 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 275 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 274 468 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 251 220 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 453 46 Doesn't always display correctly;
+#X text 452 58 However \, plays correctly;
+#X text 33 134 Major pentatonic 0 2 4 7 9;
+#X text 33 147 Major scale 0 2 4 5 7 9 11;
+#X text 374 220 pitches = 0 for notes not in scale;
+#X obj 100 297 loadbang;
+#X obj 100 316 f \$0;
+#X floatatom 100 335 5 0 0 0 - - -, f 5;
+#X obj 275 242 f \$0;
+#X msg 275 263 \; \$1-pitches 1 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 1 0 0
+1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 0 \;;
+#X obj 274 324 f \$0;
+#X msg 274 343 \; \$1-pitches 1 0 1 0 1 1 0 1 0 1 0 1 1 0 1 0 1 1 0
+1 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 \;;
+#X obj 275 405 f \$0;
+#X msg 275 425 \; \$1-pitches 1 0 1 1 0 1 0 1 1 0 1 0 1 1 0 1 1 0 1
+0 1 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 \;;
+#X obj 274 487 f \$0;
+#X msg 274 507 \; \$1-pitches 1 1 0 1 0 1 1 0 1 0 1 0 1 1 0 1 0 1 1
+0 1 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 \;;
+#X obj 352 120 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 352 139 f \$0;
+#X msg 352 159 \; \$1-pitches const 0;
+#X obj 140 22 loadbang;
+#X obj 140 41 f \$0;
+#X msg 140 60 symbol \$1-pitches;
+#X obj 59 79 array random;
+#X text 388 138 clear array;
+#N canvas 798 113 632 468 copyrightInfo 1;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates generative music on an Elektron
+Digitakt. Copyright (C) 2019 Jerry Z. Raski This program is free software:
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation
+\, either version 3 of the License \, or (at your option) any later
+version. This program is distributed in the hope that it will be useful
+\, but WITHOUT ANY WARRANTY \; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details. You should have received a copy of
+the GNU General Public License along with this program. If not \, see
+<https://www.gnu.org/licenses/>.;
+#X restore 17 541 pd copyrightInfo;
+#X connect 0 0 5 0;
+#X connect 2 0 22 0;
+#X connect 4 0 36 0;
+#X connect 10 0 24 0;
+#X connect 11 0 26 0;
+#X connect 12 0 28 0;
+#X connect 13 0 22 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 2;
+#X connect 36 0 0 0;
